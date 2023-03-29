@@ -3,6 +3,9 @@ name: Reusable Workflow for Clober DEX
 on:
   pull_request_target:
     types: [opened, edited, reopened]
+  push:
+    branches:
+      - '**'
 
 # Action should have write permission to make updates to PR
 permissions:
