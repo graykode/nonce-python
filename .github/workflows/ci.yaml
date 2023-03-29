@@ -1,0 +1,15 @@
+name: Reusable Workflow for Clober DEX
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  clober-template:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ryanvade/enforce-pr-description-length-action@v1
+        with:
+          minLength: 10
